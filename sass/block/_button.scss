@@ -1,0 +1,13 @@
+@use "../sass-utils/variables" as *;
+
+.large-btn {
+  display: grid;
+  place-items: center;
+  font-family: $ff-serif;
+  font-size: $fs-600;
+  padding: 0 2em;
+  background-color: $white-color;
+  color: $primary-color;
+  border-radius: 50%;
+  text-decoration: none;
+}
