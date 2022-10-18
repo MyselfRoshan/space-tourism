@@ -1,7 +1,11 @@
 // Color
-$primary-color: hsl(230, 35%, 7%);
-$secondary-color: hsl(231, 77%, 90%);
-$white-color: hsl(0, 0%, 100%);
+$primary-color: 230 35% 7%;
+$primary-light: 230 35% 7% / 0.15;
+$secondary-color: 231 77% 90%;
+$white-color: 0 0% 100%;
+$white-light: 0 0% 100% / 0.5;
+$white-lighter: 0 0% 100% / 0.25;
+$white-none: 0 0% 100% / 0;
 
 // Font
 $Bellefair: "Bellefair-serif", serif;

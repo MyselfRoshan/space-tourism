@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+
+.numbered-title {
+  font-family: $ff-sans-condensed;
+  font-size: $fs-500;
+  text-transform: uppercase;
+  letter-spacing: 4.72px;
+  text-decoration: none;
+
+  span {
+    margin-right: 0.5em;
+    font-weight: 700;
+    color: hsl($white-lighter);
+  }
+}

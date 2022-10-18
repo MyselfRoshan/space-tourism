@@ -25,6 +25,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  font-weight: 400;
 }
 
 /* Set core root defaults */
@@ -87,14 +88,319 @@ img:not([alt]) {
     scroll-behavior: auto !important;
   }
 }
-.large-btn {
+.text-dark {
+  color: hsl(230deg, 35%, 7%);
+}
+
+.text-accent {
+  color: hsl(231deg, 77%, 90%);
+}
+
+.text-light {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.bg-dark {
+  background-color: hsl(230deg, 35%, 7%);
+}
+
+.bg-accent {
+  background-color: hsl(231deg, 77%, 90%);
+}
+
+.bg-light {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.ff-serif {
+  font-family: "Bellefair-serif", serif;
+}
+
+.ff-sans-condensed {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.ff-sans {
+  font-family: "Barlow", sans-serif;
+}
+
+.fs-900 {
+  font-size: 9.375rem;
+}
+
+.fs-800 {
+  font-size: 6.25rem;
+}
+
+.fs-700 {
+  font-size: 3.5rem;
+}
+
+.fs-600 {
+  font-size: 2rem;
+}
+
+.fs-500 {
+  font-size: 1.75rem;
+}
+
+.fs-400 {
+  font-size: 1.125rem;
+}
+
+.fs-300 {
+  font-size: 1rem;
+}
+
+.fs-200 {
+  font-size: 0.875rem;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
+}
+
+body {
+  color: hsl(231deg, 77%, 90%);
+  font-size: 1.125rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+}
+
+.ff-serif {
+  font-family: "Bellefair-serif", serif;
+}
+
+.ff-sans-condensed {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.ff-sans {
+  font-family: "Barlow", sans-serif;
+}
+
+.fs-900 {
+  font-size: 9.375rem;
+}
+
+.fs-800 {
+  font-size: 6.25rem;
+}
+
+.fs-700 {
+  font-size: 3.5rem;
+}
+
+.fs-600 {
+  font-size: 2rem;
+}
+
+.fs-500 {
+  font-size: 1.75rem;
+}
+
+.fs-400 {
+  font-size: 1.125rem;
+}
+
+.fs-300 {
+  font-size: 1rem;
+}
+
+.fs-200 {
+  font-size: 0.875rem;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
+}
+
+.text-dark {
+  color: hsl(230deg, 35%, 7%);
+}
+
+.text-accent {
+  color: hsl(231deg, 77%, 90%);
+}
+
+.text-light {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.bg-dark {
+  background-color: hsl(230deg, 35%, 7%);
+}
+
+.bg-accent {
+  background-color: hsl(231deg, 77%, 90%);
+}
+
+.bg-light {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.numbered-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 4.72px;
+  text-decoration: none;
+}
+.numbered-title span {
+  margin-right: 0.5em;
+  font-weight: 700;
+  color: hsla(0deg, 0%, 100%, 0.25);
+}
+
+.d-flex {
+  display: flex;
+  gap: var(--flex-gap, 1rem);
+}
+
+.d-grid {
   display: grid;
+  gap: var(--grid-gap, 1rem);
+}
+
+.primary-nav {
+  --flex-gap: 3rem;
+}
+.primary-nav a {
+  text-decoration: none;
+}
+.primary-nav a span {
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+.large-btn {
+  cursor: pointer;
+  display: inline-grid;
+  position: relative;
+  z-index: 1;
   place-items: center;
   font-family: "Bellefair-serif", serif;
   font-size: 2rem;
   padding: 0 2em;
+  aspect-ratio: 1;
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(230deg, 35%, 7%);
   border-radius: 50%;
+  border: none;
   text-decoration: none;
+  transform: rotate(-720deg) scale(1);
+  transition: transform 500ms ease-in-out;
+}
+.large-btn:is(:focus, :hover) {
+  transform: rotate(720deg) scale(0.75);
+  background-color: hsl(231deg, 77%, 90%);
+  transition: transform 500ms ease-in-out;
+}
+.large-btn:is(:active) {
+  transform: rotate(-720deg) scale(1);
+  transition: transform 500ms ease-in-out;
+}
+
+.large-btn::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: hsla(0deg, 0%, 100%, 0.5);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.large-btn:is(:hover, :focus)::after {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+.underline-indicators > * {
+  cursor: pointer;
+  padding-bottom: var(--underline-gap, 1em) 0;
+  border: 0;
+  border-bottom: 0.2rem solid hsla(0deg, 0%, 100%, 0);
+}
+.underline-indicators > *:is(:hover, :focus) {
+  opacity: 1;
+  border-color: hsla(0deg, 0%, 100%, 0.5);
+}
+
+.underline-indicators .active {
+  border-color: hsl(0deg, 0%, 100%);
+}
+
+.dot-indicators > * {
+  cursor: pointer;
+  padding: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: hsla(0deg, 0%, 100%, 0);
+}
+.dot-indicators > *:is(:hover, :focus) {
+  opacity: 1;
+  background-color: hsla(0deg, 0%, 100%, 0.5);
+}
+
+.dot-indicators .dot-active {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.numbered-list > * {
+  cursor: pointer;
+  padding: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 0.1em solid hsla(0deg, 0%, 100%, 0.5);
+}
+.numbered-list > *:is(:hover, :focus) {
+  opacity: 1;
+  background-color: transparent;
+  border-color: hsl(0deg, 0%, 100%);
+}
+
+.numbered-list .list-active {
+  border-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0deg, 0%, 100%);
 }/*# sourceMappingURL=main.css.map */

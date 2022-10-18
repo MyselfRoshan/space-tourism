@@ -1,8 +1,19 @@
 // Base
 @import "./base/reset";
-
-// block
-@import "./block/button";
+@import "./base/typography";
 
 //utilities
 @import "./utilities/font";
+@import "./utilities/color";
+@import "./utilities/numbered-titles";
+
+// Composition
+@import "./composition/flex";
+@import "./composition/grid";
+@import "./composition/nav";
+
+// block
+@import "./block/button";
+@import "./block/underline-indicators";
+@import "./block/dot-indicators";
+@import "./block/numbered-list";

@@ -1,0 +1,10 @@
+@use "../utilities/color" as *;
+@use "../utilities/font" as *;
+@use "../abstracts/variables" as *;
+
+body {
+  color: hsl($secondary-color);
+  font-size: $fs-400;
+  font-family: $ff-sans;
+  font-weight: 400;
+}
