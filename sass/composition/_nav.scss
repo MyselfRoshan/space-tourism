@@ -1,0 +1,13 @@
+// Primary-nav
+.primary-nav {
+  --flex-gap: 3rem;
+
+  a {
+    text-decoration: none;
+
+    span {
+      font-weight: 700;
+      margin-right: 0.5em;
+    }
+  }
+}

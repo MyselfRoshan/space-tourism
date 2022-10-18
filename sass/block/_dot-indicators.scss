@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as *;
+
+.dot-indicators > * {
+  cursor: pointer;
+  padding: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: hsl($white-none);
+
+  &:is(:hover, :focus) {
+    opacity: 1;
+    background-color: hsl($white-light);
+  }
+}
+
+.dot-indicators .dot-active {
+  background-color: hsl($white-color);
+}

@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as c;
+
+.text-dark {
+  color: hsl(c.$primary-color);
+}
+.text-accent {
+  color: hsl(c.$secondary-color);
+}
+.text-light {
+  color: hsl(c.$white-color);
+}
+.bg-dark {
+  background-color: hsl(c.$primary-color);
+}
+.bg-accent {
+  background-color: hsl(c.$secondary-color);
+}
+.bg-light {
+  background-color: hsl(c.$white-color);
+}

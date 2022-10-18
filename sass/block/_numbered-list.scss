@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as *;
+
+.numbered-list > * {
+  cursor: pointer;
+  padding: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 0.1em solid hsl($white-light);
+
+  &:is(:hover, :focus) {
+    opacity: 1;
+    background-color: transparent;
+    border-color: hsl($white-color);
+  }
+}
+
+.numbered-list .list-active {
+  border-color: hsl($white-color);
+  background-color: hsl($white-color);
+}

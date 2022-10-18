@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as *;
+
+.underline-indicators > * {
+  cursor: pointer;
+  padding-bottom: var(--underline-gap, 1em) 0;
+  border: 0;
+  border-bottom: 0.2rem solid hsla($white-none);
+
+  &:is(:hover, :focus) {
+    opacity: 1;
+    border-color: hsl($white-light);
+  }
+}
+
+.underline-indicators .active {
+  border-color: hsl($white-color);
+}
