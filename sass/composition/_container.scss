@@ -1,0 +1,47 @@
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.grid-container {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+
+  * {
+    max-width: 50ch;
+  }
+}
+
+@media (min-width: 48em) {
+  .grid-container {
+    text-align: left;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+        1rem,
+        1fr
+      );
+    &__nav {
+      display: grid;
+      grid-template-columns: minmax(1rem, 1fr) minmax(0, 60rem) minmax(
+          1rem,
+          1fr
+        );
+    }
+    &__home {
+      padding-bottom: max(6rem, 20vh);
+      align-items: end;
+    }
+
+    > {
+      :first-child {
+        grid-column: 2;
+      }
+      :last-child {
+        grid-column: 3;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// Flex
+.d-flex {
+  display: flex;
+  gap: var(--flex-gap, 1rem);
+}
+
+.align-items {
+  &-center {
+    align-items: center;
+  }
+  &-end {
+    align-items: flex-end;
+  }
+  &-start {
+    align-items: flex-start;
+  }
+}
+// Grid
+.d-grid {
+  display: grid;
+  gap: var(--grid-gap, 1rem);
+}

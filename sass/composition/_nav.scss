@@ -1,6 +1,11 @@
+@use "../abstracts/variables" as *;
+
 // Primary-nav
 .primary-nav {
   --flex-gap: 3rem;
+  background-color: hsl($white-lightest);
+  backdrop-filter: blur(1.5rem);
+  margin-inline-start: auto;
 
   a {
     text-decoration: none;
@@ -9,5 +14,17 @@
       font-weight: 700;
       margin-right: 0.5em;
     }
+  }
+}
+
+.nav-bar__wrapper {
+  grid-column: 2;
+}
+
+@supports (backdrop-filter: blur(1.5rem)) {
+  .primary-nav {
+    --flex-gap: 3rem;
+    background-color: hsl($white-lightest);
+    backdrop-filter: blur(1.5rem);
   }
 }

@@ -277,6 +277,11 @@ body {
   background-color: hsl(0deg, 0%, 100%);
 }
 
+.ms-auto {
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+}
+
 .numbered-title {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 1.75rem;
@@ -295,13 +300,66 @@ body {
   gap: var(--flex-gap, 1rem);
 }
 
+.align-items-center {
+  align-items: center;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.align-items-start {
+  align-items: flex-start;
+}
+
 .d-grid {
   display: grid;
   gap: var(--grid-gap, 1rem);
 }
 
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.grid-container {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+}
+.grid-container * {
+  max-width: 50ch;
+}
+
+@media (min-width: 48em) {
+  .grid-container {
+    text-align: left;
+    -moz-column-gap: var(--container-gap, 2rem);
+         column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+  }
+  .grid-container__nav {
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 60rem) minmax(1rem, 1fr);
+  }
+  .grid-container__home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
+  }
+  .grid-container > :first-child {
+    grid-column: 2;
+  }
+  .grid-container > :last-child {
+    grid-column: 3;
+  }
+}
 .primary-nav {
   --flex-gap: 3rem;
+  background-color: hsla(0deg, 0%, 100%, 0.05);
+  -webkit-backdrop-filter: blur(1.5rem);
+          backdrop-filter: blur(1.5rem);
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
 }
 .primary-nav a {
   text-decoration: none;
@@ -311,6 +369,18 @@ body {
   margin-right: 0.5em;
 }
 
+.nav-bar__wrapper {
+  grid-column: 2;
+}
+
+@supports ((-webkit-backdrop-filter: blur(1.5rem)) or (backdrop-filter: blur(1.5rem))) {
+  .primary-nav {
+    --flex-gap: 3rem;
+    background-color: hsla(0deg, 0%, 100%, 0.05);
+    -webkit-backdrop-filter: blur(1.5rem);
+            backdrop-filter: blur(1.5rem);
+  }
+}
 .large-btn {
   cursor: pointer;
   display: inline-grid;
@@ -403,4 +473,21 @@ body {
 .numbered-list .list-active {
   border-color: hsl(0deg, 0%, 100%);
   background-color: hsl(0deg, 0%, 100%);
+}
+
+.home {
+  background-image: url("/assets/images/home/background-home-mobile.jpg");
+  background-size: cover;
+  background-position: bottom center;
+}
+@media (min-width: 35em) {
+  .home {
+    background-image: url("/assets/images/home/background-home-tablet.jpg");
+    background-position: center center;
+  }
+}
+@media (min-width: 48em) {
+  .home {
+    background-image: url("/assets/images/home/background-home-desktop.jpg");
+  }
 }/*# sourceMappingURL=main.css.map */
