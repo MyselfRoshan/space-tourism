@@ -1,23 +1,23 @@
 // Base
-@import "./base/reset";
-@import "./base/typography";
+@use "base/reset";
+@use "base/typography";
 
 //utilities
-@import "./utilities/font";
-@import "./utilities/color";
-@import "./utilities/spacing";
-@import "./utilities/numbered-titles";
+@use "utilities/font";
+@use "utilities/color";
+@use "utilities/spacing";
+@use "utilities/numbered-titles";
 
 // Composition
-@import "./composition/display";
-@import "./composition/container";
-@import "./composition/nav";
+@use "composition/display";
+@use "composition/container";
+@use "composition/nav";
 
 // block
-@import "./block/button";
-@import "./block/underline-indicators";
-@import "./block/dot-indicators";
-@import "./block/numbered-list";
+@use "block/button";
+@use "block/underline-indicators";
+@use "block/dot-indicators";
+@use "block/numbered-list";
 
 // pages
-@import "./pages/home";
+@use "pages/home";

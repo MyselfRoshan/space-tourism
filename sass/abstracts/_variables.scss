@@ -26,3 +26,54 @@ $fs-500: 1.75rem;
 $fs-400: 1.125rem;
 $fs-300: 1rem;
 $fs-200: 0.875rem;
+// Font size
+$font-size: (
+  900: 9.375rem,
+  800: 6.25rem,
+  700: 3.5rem,
+  600: 2rem,
+  500: 1.75rem,
+  400: 1.125rem,
+  300: 1rem,
+  200: 0.875rem,
+);
+
+// letter-spacing
+$letter-spacing: (
+  1: 4.75px,
+  2: 2.7px,
+  3: 2.35px,
+);
+
+// Spacing
+$spacing: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.25rem,
+  5: 1.5rem,
+  6: 2rem,
+  auto: auto,
+);
+
+// Dsplay variable
+
+$property-names: (
+  justify-content: justify-content,
+  align-content: align-content,
+  place-content: place-content,
+  justify-items: justify-items,
+  align-items: align-items,
+  place-items: place-items,
+  justify-self: justify-self,
+  align-self: align-self,
+);
+
+$property-values: (
+  baseline: baseline,
+  flex-start: flex-start,
+  center: center,
+  flex-end: flex-end,
+  unset: unset,
+);
