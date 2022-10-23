@@ -25,13 +25,17 @@
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body class="home">
-    <header class="grid-container__nav">
+    <header class="grid-container__nav mt-2 mb-6">
       <div class="nav-bar__wrapper d-flex align-items-center">
         <div>
-          <img src="/assets/images/shared/logo.svg" alt="Space Tourism Logo" />
+          <img
+            class="logo"
+            src="/assets/images/shared/logo.svg"
+            alt="Space Tourism Logo"
+          />
         </div>
         <nav class="ms-auto">
-          <ul class="primary-nav underline-indicators d-flex">
+          <ul class="primary-nav underline-indicators d-flex p-2">
             <li class="active">
               <a
                 class="ff-sans-condensed text-light letter-spacing-2 text-uppercase"
@@ -64,7 +68,9 @@
         </nav>
       </div>
     </header>
-    <main class="grid-container grid-container__home">
+    <main
+      class="grid-container grid-container__home place-items-flex-end mb-auto"
+    >
       <section>
         <h1 class="fs-500 ff-sans-condensed letter-spacing-1 text-uppercase">
           So, you want to travel to

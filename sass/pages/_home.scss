@@ -2,6 +2,7 @@
   background-image: url("/assets/images/home/background-home-mobile.jpg");
   background-size: cover;
   background-position: bottom center;
+  overflow: hidden;
 
   @media (min-width: 35em) {
     background-image: url("/assets/images/home/background-home-tablet.jpg");

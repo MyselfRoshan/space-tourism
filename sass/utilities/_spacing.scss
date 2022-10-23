@@ -1,3 +1,63 @@
+@use "../abstracts/variables" as *;
+
 .ms-auto {
   margin-inline-start: auto;
+}
+.mx-auto {
+  margin-inline: auto;
+}
+
+// $space={10,1,2,3,4,5,6,auto}
+// $value={0,0.25,0.5,1,1.25,1.5,2,auto}rem
+// $scaping is sass map
+@each $space, $value in $spacing {
+  // Padding utility classes
+  .p-#{$space} {
+    padding: #{$value} !important;
+  }
+  .px-#{$space} {
+    padding-left: #{$value};
+    padding-right: #{$value};
+  }
+  .py-#{$space} {
+    padding-top: #{$value};
+    padding-bottom: #{$value};
+  }
+  .ps-#{$space} {
+    padding-left: #{$value};
+  }
+  .pt-#{$space} {
+    padding-top: #{$value};
+  }
+  .pe-#{$space} {
+    padding-right: #{$value};
+  }
+  .pb-#{$space} {
+    padding-bottom: #{$value};
+  }
+
+  // Margin utility classes
+  .m-#{$space} {
+    padding: #{$value};
+  }
+  .mx-#{$space} {
+    padding-left: #{$value};
+    padding-right: #{$value};
+  }
+  .my-#{$space} {
+    padding-top: #{$value};
+    padding-bottom: #{$value};
+  }
+  .ms-#{$space} {
+    padding-left: #{$value};
+  }
+  .mt-#{$space} {
+    padding-top: #{$value};
+  }
+  .me-#{$space} {
+    padding-right: #{$value};
+  }
+  .mb-#{$space} {
+    padding-bottom: #{$value};
+  }
 }

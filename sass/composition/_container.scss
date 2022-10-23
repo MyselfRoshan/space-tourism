@@ -7,9 +7,12 @@
 .grid-container {
   text-align: center;
   display: grid;
-  place-items: center;
+  place-items: center !important;
   padding-inline: 1rem;
 
+  @media (max-width: 48em) {
+    // place-items: center !important;
+  }
   * {
     max-width: 50ch;
   }
@@ -32,7 +35,7 @@
     }
     &__home {
       padding-bottom: max(6rem, 20vh);
-      align-items: end;
+      height: clamp(48rem, 50rem, 55rem);
     }
 
     > {

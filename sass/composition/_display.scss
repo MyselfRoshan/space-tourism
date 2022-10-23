@@ -1,20 +1,20 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
 // Flex
 .d-flex {
   display: flex;
   gap: var(--flex-gap, 1rem);
 }
 
-.align-items {
-  &-center {
-    align-items: center;
-  }
-  &-end {
-    align-items: flex-end;
-  }
-  &-start {
-    align-items: flex-start;
+@each $property, $property-name in $property-names {
+  @each $property-value-name, $property-value in $property-values {
+    .#{$property}-#{$property-value-name} {
+      #{$property-name}: #{$property-value} !important;
+    }
   }
 }
+
 // Grid
 .d-grid {
   display: grid;
