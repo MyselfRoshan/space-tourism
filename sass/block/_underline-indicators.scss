@@ -2,7 +2,7 @@
 
 .underline-indicators > * {
   cursor: pointer;
-  padding-bottom: var(--underline-gap, 1em) 0;
+  padding: var(--underline-gap, 1em) 0;
   border: 0;
   border-bottom: 0.2rem solid hsla($white-none);
 

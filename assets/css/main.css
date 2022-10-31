@@ -908,6 +908,7 @@ body {
 
 .primary-nav {
   --flex-gap: 3rem;
+  --underline-gap: 2rem;
   background-color: hsla(0deg, 0%, 100%, 0.05);
   -webkit-backdrop-filter: blur(1.5rem);
           backdrop-filter: blur(1.5rem);
@@ -923,19 +924,14 @@ body {
 }
 @media (max-width: 48em) {
   .primary-nav {
+    --flex-gap: 5rem;
     flex-direction: column;
     position: fixed;
     inset: 0 0 0 20%;
     z-index: 99999;
-    padding: 3rem 2rem !important;
+    padding: min(20rem, 18vh) 2.5rem !important;
   }
 }
-@media (max-width: 48em) {
-  .primary-nav__wrapper {
-    position: fixed;
-  }
-}
-
 .nav-bar__wrapper {
   grid-column: 2;
 }
@@ -995,7 +991,7 @@ body {
 
 .underline-indicators > * {
   cursor: pointer;
-  padding-bottom: var(--underline-gap, 1em) 0;
+  padding: var(--underline-gap, 1em) 0;
   border: 0;
   border-bottom: 0.2rem solid hsla(0deg, 0%, 100%, 0);
 }
