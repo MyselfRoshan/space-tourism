@@ -1,8 +1,17 @@
 @use "../abstracts/variables" as *;
 
 // Primary-nav
+
+.mobile-nav-toggler {
+  background-color: transparent;
+  border: none;
+  @media (min-width: 48em) {
+    display: none;
+  }
+}
 .primary-nav {
   --flex-gap: 3rem;
+  --underline-gap: 2rem;
   background-color: hsl($white-lightest);
   backdrop-filter: blur(1.5rem);
   margin-inline-start: auto;
@@ -13,6 +22,20 @@
     span {
       font-weight: 700;
       margin-right: 0.5em;
+    }
+  }
+
+  @media (max-width: 48em) {
+    --flex-gap: 5rem;
+    flex-direction: column;
+    position: fixed;
+    inset: 0 0 0 20%;
+    z-index: 99999;
+    padding: min(20rem, 18vh) 2.5rem !important;
+  }
+  &__wrapper {
+    @media (max-width: 48em) {
+      // position: relative;
     }
   }
 }
