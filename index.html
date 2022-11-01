@@ -25,51 +25,54 @@
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body class="home">
-    <header class="grid-container__nav mt-2 mb-6">
-      <div class="nav-bar__wrapper d-flex align-items-center">
-        <div>
-          <img
-            class="logo"
-            src="/assets/images/shared/logo.svg"
-            alt="Space Tourism Logo"
-          />
-        </div>
-        <button class="mobile-nav-toggler ms-auto" type="button">
-          <img src="/assets/images/shared/icon-hamburger.svg" alt="" />
-        </button>
-        <nav class="primary-nav__wrapper ms-auto">
-          <ul class="primary-nav underline-indicators d-flex p-2">
-            <li class="active">
-              <a
-                class="ff-sans-condensed text-light letter-spacing-2 text-uppercase"
-                href=""
-                ><span>00</span>Home</a
-              >
-            </li>
-            <li>
-              <a
-                class="ff-sans-condensed text-light letter-spacing-2 text-uppercase"
-                href=""
-                ><span>01</span>Destination</a
-              >
-            </li>
-            <li>
-              <a
-                class="ff-sans-condensed text-light letter-spacing-2 text-uppercase"
-                href=""
-                ><span>02</span>Crew</a
-              >
-            </li>
-            <li>
-              <a
-                class="ff-sans-condensed text-light letter-spacing-2 text-uppercase"
-                href=""
-                ><span>03</span>Technology</a
-              >
-            </li>
-          </ul>
-        </nav>
+    <header
+      class="primary-header d-flex justify-content-space-between align-items-center"
+    >
+      <div>
+        <img
+          class="logo"
+          src="/assets/images/shared/logo.svg"
+          alt="Space Tourism Logo"
+        />
       </div>
+      <button class="mobile-nav-toggler ms-auto" type="button">
+        <span class="sr-only" aria-expanded="false">Menu</span>
+      </button>
+      <nav class="primary-nav__wrapper">
+        <ul
+          class="primary-nav underline-indicators d-flex"
+          data-visible="false"
+        >
+          <li class="active">
+            <a
+              class="ff-sans-condensed text-light letter-spacing-2 text-uppercase"
+              href=""
+              ><span>00</span>Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-condensed text-light letter-spacing-2 text-uppercase"
+              href=""
+              ><span>01</span>Destination</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-condensed text-light letter-spacing-2 text-uppercase"
+              href=""
+              ><span>02</span>Crew</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-condensed text-light letter-spacing-2 text-uppercase"
+              href=""
+              ><span>03</span>Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <main
       class="grid-container grid-container__home place-items-flex-end mb-auto"
@@ -90,5 +93,6 @@
         <a class="text-uppercase large-btn" href="">Explore</a>
       </section>
     </main>
+    <script src="/assets/js/nav.js"></script>
   </body>
 </html>

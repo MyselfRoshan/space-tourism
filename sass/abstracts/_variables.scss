@@ -8,7 +8,7 @@ $white-lighter: 0 0% 100% / 0.25;
 $white-none: 0 0% 100% / 0;
 // For nav glass effect
 $white-lightest: 0 0% 100% / 0.05;
-
+$dark-lightest: 0 0% 0% / 0.9;
 // Font
 $Bellefair: "Bellefair-serif", serif;
 $Barlow-condensed: "Barlow Condensed", sans-serif;
@@ -75,5 +75,7 @@ $property-values: (
   start: start,
   center: center,
   end: end,
+  space-between: space-between,
+  space-around: space-around,
   unset: unset,
 );
