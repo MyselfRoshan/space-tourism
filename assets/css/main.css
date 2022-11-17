@@ -1045,7 +1045,7 @@ body {
     justify-self: start;
   }
 }
-.grid-container__destination > destination-info {
+.grid-container__destination > .destination-info {
   grid-area: article;
 }
 .grid-container__crew {
