@@ -86,6 +86,13 @@ img:not([alt]) {
   }
 }
 
+/* Remove animations and transition on window resize */
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Screen reader only class */
 .sr-only {
   position: absolute;
   width: 1px;

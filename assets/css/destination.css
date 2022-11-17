@@ -1,0 +1,19 @@
+.home {
+  background-image: url("/assets/images/destination/background-destination-mobile.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+@media (min-width: 35em) {
+  .home {
+    background-image: url("/assets/images/destination/background-destination-tablet.jpg");
+    background-position: center center;
+  }
+}
+@media (min-width: 48em) {
+  .home {
+    background-image: url("/assets/images/destination/background-destination-desktop.jpg");
+  }
+}/*# sourceMappingURL=destination.css.map */

@@ -5,14 +5,15 @@ $secondary-color: 231 77% 90%;
 $white-color: 0 0% 100%;
 $white-light: 0 0% 100% / 0.5;
 $white-lighter: 0 0% 100% / 0.25;
+$white--lighter: 0 0% 100% / 0.1;
 $white-none: 0 0% 100% / 0;
 // For nav glass effect
 $white-lightest: 0 0% 100% / 0.05;
 $dark-lightest: 0 0% 0% / 0.9;
 // Font
-$Bellefair: "Bellefair-serif", serif;
-$Barlow-condensed: "Barlow Condensed", sans-serif;
-$Barlow: "Barlow", sans-serif;
+$Bellefair: 'Bellefair-serif', serif;
+$Barlow-condensed: 'Barlow Condensed', sans-serif;
+$Barlow: 'Barlow', sans-serif;
 
 $ff-serif: $Bellefair;
 $ff-sans-condensed: $Barlow-condensed;
@@ -26,16 +27,38 @@ $fs-500: 1.75rem;
 $fs-400: 1.125rem;
 $fs-300: 1rem;
 $fs-200: 0.875rem;
+
+// Breakpoints
+$breakpoints: (
+  tablet: 35em,
+  desktop: 48em,
+);
 // Font size
 $font-size: (
-  900: 9.375rem,
-  800: 6.25rem,
-  700: 3.5rem,
-  600: 2rem,
-  500: 1.75rem,
-  400: 1.125rem,
-  300: 1rem,
-  200: 0.875rem,
+  mobile: (
+    900: clamp(5rem, 13.6vw + 1rem, 9.375rem),
+    800: 3.5rem,
+    700: 1.5rem,
+    600: 1rem,
+    500: 1rem,
+    400: 0.9375rem,
+    300: 1rem,
+    200: 0.875rem,
+  ),
+  tablet: (
+    800: 5rem,
+    700: 2.5rem,
+    600: 1.5rem,
+    500: 1.25rem,
+    400: 1rem,
+  ),
+  desktop: (
+    800: 6.25rem,
+    700: 3.5rem,
+    600: 2rem,
+    500: 1.75rem,
+    400: 1.125rem,
+  ),
 );
 
 // letter-spacing

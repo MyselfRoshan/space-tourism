@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as *;
+
+.destination {
+  background-image: url('/assets/images/destination/background-destination-mobile.jpg');
+  background-size: cover;
+  background-position: bottom center;
+  max-height: max-content;
+
+  @media (min-width: 35em) {
+    background-image: url('/assets/images/destination/background-destination-tablet.jpg');
+    background-position: center center;
+  }
+  @media (min-width: 48em) {
+    background-image: url('/assets/images/destination/background-destination-desktop.jpg');
+  }
+
+  &__travel-info {
+    border-top: 1.5px solid hsl($white-lighter);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2.5rem;
+    margin-top: 2.5rem;
+
+    @media (min-width: 35em) {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    @media (min-width: 48em) {
+      --flex-gap: 2.6rem;
+      flex-direction: row;
+      justify-content: start;
+    }
+    @media (min-width: 52em) {
+      --flex-gap: clamp(2.6rem, 6.5vw, 6rem);
+    }
+
+    p {
+      font-size: 1.75rem;
+    }
+  }
+}

@@ -24,7 +24,7 @@
 
     <title>Frontend Mentor | Space tourism website</title>
   </head>
-  <body class="home resize-animation-stopper">
+  <body class="destination resize-animation-stopper">
     <header
       class="primary-header d-flex justify-content-space-between align-items-center"
     >
@@ -76,23 +76,58 @@
       </nav>
     </header>
     <main
-      class="grid-container grid-container__home place-items-flex-end mb-auto"
+      class="grid-container grid-container__destination place-items-flex-end mb-auto"
     >
-      <section>
-        <h1 class="fs-500 ff-sans-condensed letter-spacing-1 text-uppercase">
-          So, you want to travel to
-          <span class="fs-900 ff-serif text-light d-block">Space</span>
-        </h1>
+      <h1 class="numbered-title fs-500">
+        <span>01</span> Pick your destination
+      </h1>
+      <img src="/assets/images/destination/image-moon.png" alt="Moon" />
+      <div class="tab-list underline-indicators d-flex">
+        <button
+          class="text-uppercase ff-sans-condensed text-accent bg-transparent active"
+        >
+          Moon</button
+        ><button
+          class="text-uppercase ff-sans-condensed text-accent bg-transparent"
+        >
+          Mars</button
+        ><button
+          class="text-uppercase ff-sans-condensed text-accent bg-transparent"
+        >
+          Europa</button
+        ><button
+          class="text-uppercase ff-sans-condensed text-accent bg-transparent"
+        >
+          Titan
+        </button>
+      </div>
+      <article class="destination-info">
+        <h2 class="d-block ff-serif fs-800 text-light text-uppercase">Moon</h2>
         <p class="paragraph-width">
-          Let’s face it; if you want to go to space, you might as well genuinely
-          go to outer space and not hover kind of on the edge of it. Well sit
-          back, and relax because we’ll give you a truly out of this world
-          experience!
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
         </p>
-      </section>
-      <section>
-        <a class="text-uppercase large-btn" href="">Explore</a>
-      </section>
+        <div class="destination__travel-info d-flex">
+          <div>
+            <h3
+              class="text-accent text-uppercase fs-200 ff-sans-condensed letter-spacing-3 pb-2"
+            >
+              Avg. distance
+            </h3>
+            <p class="text-uppercase ff-serif text-light">384,400 km</p>
+          </div>
+          <div>
+            <h3
+              class="text-accent text-uppercase fs-200 ff-sans-condensed letter-spacing-3 pb-2"
+            >
+              Est. travel time
+            </h3>
+            <p class="text-uppercase ff-serif text-light">3 days</p>
+          </div>
+        </div>
+      </article>
     </main>
     <!-- Navigation script -->
     <script defer src="/assets/js/nav.js"></script>

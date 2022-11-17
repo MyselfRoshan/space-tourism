@@ -1,23 +1,27 @@
 // Base
-@use "base/reset";
-@use "base/typography";
+@use 'base/reset';
+@use 'base/typography';
 
 //utilities
-@use "utilities/font";
-@use "utilities/color";
-@use "utilities/spacing";
-@use "utilities/numbered-titles";
+@use 'utilities/font';
+@use 'utilities/color';
+@use 'utilities/spacing';
+@use 'utilities/numbered-titles';
 
 // Composition
-@use "composition/display";
-@use "composition/container";
-@use "composition/nav";
+@use 'composition/display';
+@use 'composition/container';
+@use 'composition/nav';
 
 // block
-@use "block/button";
-@use "block/underline-indicators";
-@use "block/dot-indicators";
-@use "block/numbered-list";
+@use 'block/button';
+@use 'block/underline-indicators';
+@use 'block/dot-indicators';
+@use 'block/numbered-list';
+@use 'block/tab-list';
 
 // pages
-@use "pages/home";
+@use 'pages/home';
+@use 'pages/destination';
+@use 'pages/crew';
+@use 'pages/technology';
