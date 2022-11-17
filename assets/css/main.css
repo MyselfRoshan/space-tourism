@@ -1052,20 +1052,20 @@ body {
   --container-padding-bottom: 0rem;
   justify-items: start;
   align-content: start;
-  grid-template-areas: "title" "image" "dot-list" "article";
+  grid-template-areas: "crew-title" "crew-image" "dot-list" "crew-info";
 }
 @media (min-width: 35em) {
   .grid-container__crew {
-    grid-template-areas: "title" "article" "dot-list" "image";
+    grid-template-areas: "crew-title" "crew-info" "dot-list" "crew-image";
   }
 }
 @media (min-width: 48em) {
   .grid-container__crew {
-    grid-template-areas: ". title image" ". article image" ". dot-list image" ". . image";
+    grid-template-areas: ". crew-title crew-image" ". crew-info crew-image" ". dot-list crew-image" ". . crew-image";
   }
 }
 .grid-container__crew > h1 {
-  grid-area: title;
+  grid-area: crew-title;
 }
 @media (min-width: 35em) {
   .grid-container__crew > h1 {
@@ -1080,7 +1080,7 @@ body {
   }
 }
 .grid-container__crew > img {
-  grid-area: image;
+  grid-area: crew-info;
   max-width: 60%;
 }
 @media (min-width: 48em) {
@@ -1097,7 +1097,7 @@ body {
   }
 }
 .grid-container__crew > .crew-info {
-  grid-area: article;
+  grid-area: crew-image;
 }
 
 @media (min-width: 48em) {

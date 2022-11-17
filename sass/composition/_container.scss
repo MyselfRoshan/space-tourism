@@ -70,29 +70,29 @@
     justify-items: start;
     align-content: start;
     grid-template-areas:
-      'title'
-      'image'
+      'crew-title'
+      'crew-image'
       'dot-list'
-      'article';
+      'crew-info';
 
     @media (min-width: 35em) {
       grid-template-areas:
-        'title'
-        'article'
+        'crew-title'
+        'crew-info'
         'dot-list'
-        'image';
+        'crew-image';
     }
 
     @media (min-width: 48em) {
       grid-template-areas:
-        '. title image'
-        '. article image'
-        '. dot-list image'
-        '. . image';
+        '. crew-title crew-image'
+        '. crew-info crew-image'
+        '. dot-list crew-image'
+        '. . crew-image';
     }
 
     > h1 {
-      grid-area: title;
+      grid-area: crew-title;
 
       @media (min-width: 35em) {
         justify-self: start;
@@ -104,7 +104,7 @@
       }
     }
     > img {
-      grid-area: image;
+      grid-area: crew-info;
       max-width: 60%;
       @media (min-width: 48em) {
         max-width: 100%;
@@ -117,7 +117,7 @@
       }
     }
     > .crew-info {
-      grid-area: article;
+      grid-area: crew-image;
     }
   }
 }
