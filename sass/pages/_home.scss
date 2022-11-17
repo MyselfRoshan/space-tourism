@@ -1,14 +1,14 @@
 .home {
-  background-image: url("/assets/images/home/background-home-mobile.jpg");
+  background-image: url('/assets/images/home/background-home-mobile.jpg');
   background-size: cover;
   background-position: bottom center;
-  overflow: hidden;
+  max-height: max-content;
 
   @media (min-width: 35em) {
-    background-image: url("/assets/images/home/background-home-tablet.jpg");
+    background-image: url('/assets/images/home/background-home-tablet.jpg');
     background-position: center center;
   }
   @media (min-width: 48em) {
-    background-image: url("/assets/images/home/background-home-desktop.jpg");
+    background-image: url('/assets/images/home/background-home-desktop.jpg');
   }
 }

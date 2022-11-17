@@ -1,53 +1,119 @@
-@use "../abstracts/variables" as *;
+@use '../abstracts/variables' as *;
 
+// Primary-header
+.primary-header {
+  max-width: 80rem;
+  margin-inline: auto;
+
+  &::after {
+    @media (min-width: 48em) {
+      content: '';
+      position: relative;
+      height: 1.5px;
+      width: 100%;
+      background-color: hsl($dark-lightest);
+      backdrop-filter: blur(3.5rem);
+      margin-right: 0rem !important;
+      order: 1;
+    }
+    @media (min-width: 51.125em) {
+      margin-right: -5rem !important;
+    }
+  }
+}
 // Primary-nav
 
+.logo {
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
 .mobile-nav-toggler {
+  display: block;
   background-color: transparent;
+  background-image: url('/assets/images/shared/icon-hamburger.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.5rem;
+  aspect-ratio: 1;
   border: none;
-  @media (min-width: 48em) {
+  position: absolute;
+  top: 2.2rem;
+  right: 1.5rem;
+  z-index: 9999;
+
+  &[aria-expanded='true'] {
+    background-image: url('/assets/images/shared/icon-close.svg');
+  }
+  @media (min-width: 35em) {
     display: none;
   }
 }
 .primary-nav {
-  --flex-gap: 3rem;
+  --flex-gap: min(6vw, 3.5rem);
   --underline-gap: 2rem;
-  background-color: hsl($white-lightest);
-  backdrop-filter: blur(1.5rem);
-  margin-inline-start: auto;
+  background-color: hsl($dark-lightest);
+  backdrop-filter: blur(3.5rem);
+  margin-left: 0.725rem !important;
+  overflow-x: hidden;
 
+  @media (min-width: 35em) and (max-width: 48em) {
+    --flex-gap: clamp(1.8rem, 5vw, 3.5rem);
+  }
+  @media (min-width: 35em) {
+    padding-inline: clamp(2.6rem, 9vw, 7rem) !important;
+  }
+
+  @media (min-width: 48em) {
+    margin-block: 2rem !important;
+  }
+
+  @media (max-width: 35em) {
+    --flex-gap: 1.5rem !important;
+    --underline-gap: 0.25rem !important;
+    flex-direction: column;
+    position: fixed;
+    inset: 0 0 0 30%;
+    z-index: 999;
+    padding: min(20rem, 18vh) 2.5rem !important;
+    transform: translateX(100%);
+    transition: cubic-bezier(0.78, -1.23, 0.19, 1.07) 750ms;
+
+    &[data-visible='true'] {
+      transform: translateX(0);
+      transition: cubic-bezier(0, -1.07, 0, 1.53) 750ms;
+    }
+
+    &.underline-indicators > .active {
+      border: 0;
+    }
+  }
+  @media (max-width: 25em) {
+    inset: 0 0 0 20% !important;
+  }
   a {
     text-decoration: none;
 
     span {
       font-weight: 700;
       margin-right: 0.5em;
-    }
-  }
 
-  @media (max-width: 48em) {
-    --flex-gap: 5rem;
-    flex-direction: column;
-    position: fixed;
-    inset: 0 0 0 20%;
-    z-index: 99999;
-    padding: min(20rem, 18vh) 2.5rem !important;
+      @media (min-width: 35em) and (max-width: 48em) {
+        display: none;
+      }
+    }
   }
   &__wrapper {
-    @media (max-width: 48em) {
-      // position: relative;
-    }
+    order: 2;
   }
 }
 
-.nav-bar__wrapper {
-  grid-column: 2;
-}
-
-@supports (backdrop-filter: blur(1.5rem)) {
+@supports (backdrop-filter: blur(3.5rem)) {
   .primary-nav {
-    --flex-gap: 3rem;
     background-color: hsl($white-lightest);
-    backdrop-filter: blur(1.5rem);
+    backdrop-filter: blur(3.5rem);
+  }
+
+  .primary-header::after {
+    background-color: hsl($white-lighter);
+    backdrop-filter: blur(3.5rem);
   }
 }

@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as c;
+@use '../abstracts/variables' as c;
 
 .text-dark {
   color: hsl(c.$primary-color);
@@ -17,4 +17,7 @@
 }
 .bg-light {
   background-color: hsl(c.$white-color);
+}
+.bg-transparent {
+  background-color: transparent;
 }
