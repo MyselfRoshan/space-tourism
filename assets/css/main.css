@@ -1080,7 +1080,7 @@ body {
   }
 }
 .grid-container__crew > img {
-  grid-area: crew-info;
+  grid-area: crew-image;
   max-width: 60%;
 }
 @media (min-width: 48em) {
@@ -1097,7 +1097,7 @@ body {
   }
 }
 .grid-container__crew > .crew-info {
-  grid-area: crew-image;
+  grid-area: crew-info;
 }
 
 @media (min-width: 48em) {

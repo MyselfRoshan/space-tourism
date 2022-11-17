@@ -104,7 +104,7 @@
       }
     }
     > img {
-      grid-area: crew-info;
+      grid-area: crew-image;
       max-width: 60%;
       @media (min-width: 48em) {
         max-width: 100%;
@@ -117,7 +117,7 @@
       }
     }
     > .crew-info {
-      grid-area: crew-image;
+      grid-area: crew-info;
     }
   }
 }
