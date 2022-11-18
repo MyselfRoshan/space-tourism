@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+
 .container {
   padding-inline: 2em;
   margin-inline: auto;
@@ -48,11 +50,12 @@
         margin-left: 0rem;
       }
     }
-    > img {
+    > picture {
       grid-area: image;
       max-width: 60%;
       @media (min-width: 48em) {
-        max-width: 100%;
+        max-width: 90%;
+        align-self: start;
       }
     }
     > .tab-list {
@@ -62,9 +65,11 @@
       }
     }
     > .destination-info {
+      --flex-gap: 1.5rem;
       grid-area: article;
     }
   }
+
   &__crew {
     --container-padding-bottom: 0rem;
     justify-items: start;
@@ -84,11 +89,12 @@
     }
 
     @media (min-width: 48em) {
+      --conter-left-size: minmax(0, 40rem);
+      --conter-right-size: minmax(0, 20rem);
       grid-template-areas:
         '. crew-title crew-image'
         '. crew-info crew-image'
-        '. dot-list crew-image'
-        '. . crew-image';
+        '. dot-list crew-image';
     }
 
     > h1 {
@@ -103,21 +109,98 @@
         margin-left: 0rem;
       }
     }
-    > img {
+    > picture {
       grid-area: crew-image;
       max-width: 60%;
       @media (min-width: 48em) {
         max-width: 100%;
+        grid-column: span 2;
+        align-self: end;
       }
     }
     > .dot-indicators {
       grid-area: dot-list;
       @media (min-width: 48em) {
         justify-self: start;
+        align-self: start;
       }
     }
     > .crew-info {
       grid-area: crew-info;
+      @media (min-width: 48em) {
+        justify-self: start;
+      }
+    }
+  }
+
+  &__technology {
+    --container-padding-bottom: 0rem;
+    justify-items: start;
+    align-content: start;
+    grid-template-areas:
+      'technology-title'
+      'technology-image'
+      'numbered-list'
+      'technology-info';
+
+    @media (min-width: 35em) {
+      grid-template-areas:
+        'technology-title'
+        'technology-info'
+        'numbered-list'
+        'technology-image';
+    }
+
+    @media (min-width: 48em) {
+      --conter-left-size: minmax(0, 40rem);
+      --conter-right-size: minmax(0, 20rem) minmax(0, 5rem);
+      grid-template-areas:
+        '. technology-title technology-image'
+        '. technology-info technology-image'
+        '. numbered-list technology-image';
+      overflow-x: hidden;
+    }
+
+    > h1 {
+      grid-area: technology-title;
+      grid-column: 1/2;
+      @media (min-width: 35em) {
+        justify-self: start;
+        margin-top: 2rem;
+        margin-left: 1.5rem;
+      }
+      @media (min-width: 48em) {
+        margin-left: 0rem;
+      }
+    }
+    > picture {
+      grid-area: technology-image;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      // grid-column: span 6;
+      // max-width: 60%;
+      @media (min-width: 48em) {
+        max-width: 100%;
+        grid-column: span 2;
+        justify-self: end;
+      }
+    }
+    > .numbered-list {
+      grid-area: numbered-list;
+      @media (min-width: 48em) {
+        justify-self: start;
+        align-self: start;
+      }
+    }
+    > .technology-info {
+      grid-area: technology-info;
+      @media (min-width: 48em) {
+        justify-self: start;
+      }
     }
   }
 }
@@ -125,16 +208,17 @@
 @media (min-width: 48em) {
   .grid-container {
     text-align: left;
-    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
-        1rem,
-        1fr
-      );
+    grid-template-columns:
+      minmax(1rem, 1fr)
+      var(--conter-left-size, minmax(0, 30rem))
+      var(--conter-right-size, minmax(0, 30rem))
+      minmax(1rem, 1fr);
     &__nav {
       display: grid;
-      grid-template-columns: minmax(1rem, 1fr) minmax(0, 60rem) minmax(
-          1rem,
-          1fr
-        );
+      grid-template-columns:
+        minmax(1rem, 1fr)
+        minmax(0, 60rem)
+        minmax(1rem, 1fr);
     }
     &__home {
       margin-top: 0;
