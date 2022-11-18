@@ -9,6 +9,9 @@
 .text-light {
   color: hsl(c.$white-color);
 }
+.text-lighter {
+  color: hsl(c.$white-light);
+}
 .bg-dark {
   background-color: hsl(c.$primary-color);
 }

@@ -8,7 +8,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="/assets/images/favicon-32x32.png"
     />
 
     <!-- Google Fonts -->
@@ -44,7 +44,7 @@
           class="primary-nav underline-indicators d-flex"
           data-visible="false"
         >
-          <li class="active">
+          <li>
             <a
               class="ff-sans-condensed text-light letter-spacing-2 text-uppercase"
               href="/index.html"
@@ -58,17 +58,17 @@
               ><span>01</span>Destination</a
             >
           </li>
-          <li>
+          <li class="active">
             <a
               class="ff-sans-condensed text-light letter-spacing-2 text-uppercase"
-              href=""
+              href="/pages/technology.html"
               ><span>02</span>Crew</a
             >
           </li>
           <li>
             <a
               class="ff-sans-condensed text-light letter-spacing-2 text-uppercase"
-              href=""
+              href="/pages/technology.html"
               ><span>03</span>Technology</a
             >
           </li>
@@ -79,29 +79,203 @@
       class="grid-container grid-container__crew place-items-flex-end mb-auto"
     >
       <h1 class="numbered-title fs-500"><span>02</span>Meet your crew</h1>
-      <div class="dot-indicators">
-        <button class="dot-active"></button>
-        <button></button>
-        <button></button>
-        <button></button>
+      <div
+        class="dot-indicators d-flex"
+        role="tablist"
+        aria-label="crew member list"
+      >
+        <button
+          class="active"
+          role="tab"
+          tabindex="0"
+          aria-selected="false"
+          aria-controls="commander-tab"
+          data-image="commander-img"
+        >
+          <span class="sr-only">The commander</span>
+        </button>
+        <button
+          aria-selected="false"
+          role="tab"
+          tabindex="-1"
+          aria-controls="specialist-tab"
+          data-image="specialist-img"
+        >
+          <span class="sr-only">The mission specialist</span>
+        </button>
+        <button
+          aria-selected="false"
+          role="tab"
+          tabindex="-1"
+          aria-controls="pilot-tab"
+          data-image="pilot-img"
+        >
+          <span class="sr-only">The pilot</span>
+        </button>
+        <button
+          aria-selected="false"
+          role="tab"
+          tabindex="-1"
+          aria-controls="enginer-tab"
+          data-image="engineer-img"
+        >
+          <span class="sr-only">The crew engineer</span>
+        </button>
       </div>
-      <article class="crew-info">
-        <h2 class="text-uppercase ff-serif text-accent fs-600">Commander</h2>
-        <p class="text-uppercase ff-serif text-light fs-700">Douglas Hurley</p>
+      <!-- Commader article -->
+      <article
+        class="crew-info"
+        id="commander-tab"
+        role="tabpanel"
+        tabindex="0"
+      >
+        <header>
+          <h2 class="text-uppercase ff-serif text-lighter fs-600 pb-2">
+            Commander
+          </h2>
+          <p class="text-uppercase ff-serif text-light fs-700 pt-1">
+            Douglas Hurley
+          </p>
+        </header>
         <p class="paragraph-width">
           Douglas Gerald Hurley is an American engineer, former Marine Corps
           pilot and former NASA astronaut. He launched into space for the third
           time as commander of Crew Dragon Demo-2.
         </p>
       </article>
-      <img
-        src="/assets/images/crew/image-douglas-hurley.png"
-        alt="Douglas Hurley having both hands up with smile"
-      />
+      <!-- End of Commander article -->
+
+      <!-- Specialist article -->
+      <article
+        class="crew-info"
+        id="specialist-tab"
+        role="tabpanel"
+        tabindex="0"
+        hidden
+      >
+        <header>
+          <h2 class="text-uppercase ff-serif text-lighter fs-600 pb-2">
+            Mission Specialist
+          </h2>
+          <p class="text-uppercase ff-serif text-light fs-700 pt-1">
+            Mark Shuttleworth
+          </p>
+        </header>
+        <p class="paragraph-width">
+          Mark Richard Shuttleworth is the founder and CEO of Canonical, the
+          company behind the Linux-based Ubuntu operating system. Shuttleworth
+          became the first South African to travel to space as a space tourist.
+        </p>
+      </article>
+      <!-- End of Specialist article -->
+
+      <!-- Pilot article -->
+      <article
+        class="crew-info"
+        id="pilot-tab"
+        role="tabpanel"
+        tabindex="0"
+        hidden
+      >
+        <header>
+          <h2 class="text-uppercase ff-serif text-lighter fs-600 pb-2">
+            Pilot
+          </h2>
+          <p class="text-uppercase ff-serif text-light fs-700 pt-1">
+            Victor Glover
+          </p>
+        </header>
+        <p class="paragraph-width">
+          Pilot on the first operational flight of the SpaceX Crew Dragon to the
+          International Space Station. Glover is a commander in the U.S. Navy
+          where he pilots an F/A-18.He was a crew member of Expedition 64, and
+          served as a station systems flight engineer.
+        </p>
+      </article>
+      <!-- End of Pilot article -->
+
+      <!-- Engineer article -->
+      <article
+        class="crew-info"
+        id="engineer-tab"
+        role="tabpanel"
+        tabindex="0"
+        hidden
+      >
+        <header>
+          <h2 class="text-uppercase ff-serif text-lighter fs-600 pb-2">
+            Flight Engineer
+          </h2>
+          <p class="text-uppercase ff-serif text-light fs-700 pt-1">
+            Anousheh Ansari
+          </p>
+        </header>
+        <p class="paragraph-width">
+          Anousheh Ansari is an Iranian American engineer and co-founder of
+          Prodea Systems. Ansari was the fourth self-funded space tourist, the
+          first self-funded woman to fly to the ISS, and the first Iranian in
+          space.
+        </p>
+      </article>
+      <!-- End of Engineer article -->
+
+      <!-- Commander img -->
+      <picture id="commander-img" role="img">
+        <source
+          srcset="/assets/images/crew/image-douglas-hurley.webp"
+          type="image/webp"
+        />
+        <img
+          src="/assets/images/crew/image-douglas-hurley.png"
+          alt="Douglas Hurley having both hands up with smile"
+        />
+      </picture>
+      <!-- End of Commander img -->
+
+      <!-- Specialist img -->
+      <picture id="specialist-img" class="d-none" role="img">
+        <source
+          srcset="/a"
+          type="/assets/images/crew/image-mark-shuttleworth.webp"
+        />
+        <img
+          src="/assets/images/crew/image-mark-shuttleworth.png"
+          alt="Douglas Hurley having both hands up with smile"
+        />
+      </picture>
+      <!-- End of Specialist img -->
+
+      <!-- Pilot img -->
+      <picture id="pilot-img" class="d-none" role="img">
+        <source
+          srcset="/assets/images/crew/image-victor-glover.webp"
+          type="image/webp"
+        />
+        <img
+          src="/assets/images/crew/image-victor-glover.png"
+          alt="Douglas Hurley having both hands up with smile"
+        />
+      </picture>
+      <!-- End of Pilot img -->
+
+      <!-- Engineer img -->
+      <picture id="engineer-img" class="d-none" role="img">
+        <source
+          srcset="/assets/images/crew/image-anousheh-ansari.webp"
+          type="image/webp"
+        />
+        <img
+          src="/assets/images/crew/image-anousheh-ansari.png"
+          alt="Douglas Hurley having both hands up with smile"
+        />
+      </picture>
+      <!-- End of Engineer img -->
     </main>
     <!-- Navigation script -->
     <script defer src="/assets/js/nav.js"></script>
     <!-- Animations and transtions remove on resize script -->
     <script defer src="/assets/js/resizeAnimationremover.js"></script>
+    <!-- Tab toggler script -->
+    <script src="/assets/js/tabs.js"></script>
   </body>
 </html>
