@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as *;
+@use '../abstracts/variables' as *;
 
 .large-btn {
   cursor: pointer;
@@ -17,7 +17,7 @@
   text-decoration: none;
 
   transform: rotate(-720deg) scale(1);
-  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out !important;
 
   &:is(:focus, :hover) {
     transform: rotate(720deg) scale(0.75);
@@ -31,7 +31,7 @@
 }
 
 .large-btn::after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   width: 100%;
