@@ -80,12 +80,42 @@
     >
       <h1 class="numbered-title fs-500"><span>03</span> launch 101</h1>
 
-      <div class="numbered-list d-flex">
-        <button class="ff-serif fs-600 active">1</button
-        ><button class="ff-serif fs-600 text-light">2</button
-        ><button class="ff-serif fs-600 text-light">3</button>
+      <div
+        class="numbered-list d-flex"
+        role="tablist"
+        aria-label="technology-list"
+      >
+        <button
+          class="ff-serif fs-600 active"
+          aria-controls=""
+          aria-selected="true"
+          role="tab"
+          tabindex="0"
+        >
+          1</button
+        ><button
+          class="ff-serif fs-600"
+          aria-selected="false"
+          role="tab"
+          tabindex="-1"
+        >
+          2</button
+        ><button
+          class="ff-serif fs-600"
+          aria-selected="false"
+          role="tab"
+          tabindex="-1"
+        >
+          3
+        </button>
       </div>
-      <article class="technology-info" role="tabpanel">
+      <!-- Launch Vechile article -->
+      <article
+        id="launch-vehicle-tab"
+        class="technology-info"
+        role="tabpanel"
+        tabindex="0"
+      >
         <header>
           <h2
             class="ff-sans-condensed fs-400 text-uppercase letter-spacing-2 pb-2"
@@ -104,17 +134,107 @@
           on the launch pad!
         </p>
       </article>
+      <!-- End of Launch Vechile article -->
 
-      <picture>
+      <!-- Space Port article -->
+      <article
+        id="spaceport-tab"
+        class="technology-info"
+        role="tabpanel"
+        tabindex="0"
+        hidden
+      >
+        <header>
+          <h2
+            class="ff-sans-condensed fs-400 text-uppercase letter-spacing-2 pb-2"
+          >
+            The terminology...
+          </h2>
+          <p class="d-block ff-serif fs-700 text-light text-uppercase pt-1">
+            Spaceport
+          </p>
+        </header>
+        <p class="paragraph-width">
+          A spaceport or cosmodrome is a site for launching (or receiving)
+          spacecraft, by analogy to the seaport for ships or airport for
+          aircraft. Based in the famous Cape Canaveral, our spaceport is ideally
+          situated to take advantage of the Earth’s rotation for launch.
+        </p>
+      </article>
+      <!-- End of Space Port article -->
+
+      <!-- Space Capsule article -->
+      <article
+        id="space-capsule-tab"
+        class="technology-info"
+        role="tabpanel"
+        tabindex="0"
+        hidden
+      >
+        <header>
+          <h2
+            class="ff-sans-condensed fs-400 text-uppercase letter-spacing-2 pb-2"
+          >
+            The terminology...
+          </h2>
+          <p class="d-block ff-serif fs-700 text-light text-uppercase pt-1">
+            Space capsule
+          </p>
+        </header>
+        <p class="paragraph-width">
+          A space capsule is an often-crewed spacecraft that uses a blunt-body
+          reentry capsule to reenter the Earth's atmosphere without wings. Our
+          capsule is where you'll spend your time during the flight. It includes
+          a space gym, cinema, and plenty of other activities to keep you
+          entertained.
+        </p>
+      </article>
+      <!-- End of Space Capsule article -->
+
+      <!-- Launch Vehicle image -->
+      <picture role="img" id="image-launch-vehicle">
         <source
-          media="(max-width:48em)"
-          srcset="/assets/images/technology/image-launch-vehicle-landscape.jpg"
+          media="(min-width:48em)"
+          srcset="/assets/images/technology/image-launch-vehicle-portrait.jpg"
         />
         <img
-          src="/assets/images/technology/image-launch-vehicle-portrait.jpg"
-          alt=""
+          src="/assets/images/technology/image-launch-vehicle-landscape.jpg"
+          alt="Rocket ready to launch"
         />
       </picture>
+      <!-- End of Launch Vehicle image -->
+
+      <!-- Space Port image -->
+      <picture role="img" class="d-none" id="image-spaceport">
+        <source
+          media="(min-width:48em)"
+          srcset="/assets/images/technology/image-spaceport-portrait.jpg"
+        />
+        <img
+          src="/assets/images/technology/image-spaceport-landscape.jpg"
+          alt="Man standing infront of a spaceport"
+        />
+      </picture>
+      <!-- End of Space Port image -->
+
+      <!-- Space Capsule image -->
+      <picture role="img" class="d-none" id="image-space-capsule">
+        <source
+          media="(min-width:48em)"
+          srcset="/assets/images/technology/image-space-capsule-portrait.jpg"
+        />
+        <img
+          src="/assets/images/technology/image-space-capsule-landscape.jpg"
+          alt="Space capsule in space"
+        />
+      </picture>
+      <!-- End of Space Capsule image -->
     </main>
+    <!-- Navigation script -->
+    <script defer src="/assets/js/nav.js"></script>
+    <!-- Animations and transtions remove on resize script -->
+    <script defer src="/assets/js/resizeAnimationremover.js"></script>
+    <!-- Data Fetch Script -->
+    <script defer src="/assets/js/tabs.js"></script>
   </body>
 </html>

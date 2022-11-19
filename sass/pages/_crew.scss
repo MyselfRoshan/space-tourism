@@ -12,3 +12,66 @@
     background-image: url('/assets/images/crew/background-crew-desktop.jpg');
   }
 }
+
+.grid-container__crew {
+  --container-padding-bottom: 0rem;
+  justify-items: start;
+  align-content: start;
+  grid-template-areas:
+    'crew-title'
+    'crew-image'
+    'dot-list'
+    'crew-info';
+
+  @media (min-width: 35em) {
+    grid-template-areas:
+      'crew-title'
+      'crew-info'
+      'dot-list'
+      'crew-image';
+  }
+
+  @media (min-width: 48em) {
+    --conter-left-size: minmax(0, 40rem);
+    --conter-right-size: minmax(0, 20rem);
+    grid-template-areas:
+      '. crew-title crew-image'
+      '. crew-info crew-image'
+      '. dot-list crew-image';
+  }
+
+  > h1 {
+    grid-area: crew-title;
+
+    @media (min-width: 35em) {
+      justify-self: start;
+      margin-top: 2rem;
+      margin-left: 1.5rem;
+    }
+    @media (min-width: 48em) {
+      margin-left: 0rem;
+    }
+  }
+  > picture {
+    grid-area: crew-image;
+    max-width: 60%;
+    @media (min-width: 48em) {
+      max-width: 100%;
+      grid-column: span 2;
+      align-self: end;
+    }
+  }
+  > .dot-indicators {
+    grid-area: dot-list;
+    @media (min-width: 48em) {
+      justify-self: start;
+      align-self: start;
+    }
+  }
+  > .crew-info {
+    grid-area: crew-info;
+    @media (min-width: 48em) {
+      justify-self: start;
+    }
+  }
+}

@@ -12,3 +12,29 @@
     background-image: url('/assets/images/home/background-home-desktop.jpg');
   }
 }
+
+.grid-container__home {
+  --button-position: center;
+  --container-column-gap: 0;
+  --container-row-gap: clamp(2rem, 10vw, 5rem);
+  margin-top: clamp(2rem, 12vw, 5.5rem);
+
+  @media (min-width: 48em) {
+    margin-top: 0;
+    padding-bottom: max(6rem, 20vh);
+    height: clamp(46rem, 90vh, 50rem);
+    --container-column-gap: 0rem;
+    --container-row-gap: 0rem;
+
+    > {
+      :first-child {
+        grid-column: 2;
+      }
+      :last-child {
+        --button-position: end;
+        grid-column: 3;
+        justify-self: var(--button-position);
+      }
+    }
+  }
+}
