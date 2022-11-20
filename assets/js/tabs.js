@@ -5,7 +5,9 @@ const destinationInfos = document.querySelectorAll('[role="tabpanel"]');
 let tabFocus = 0;
 
 tabLists.addEventListener('keydown', (e) => {
+  // Value for left Aroow key
   const keydownLeft = 37;
+  // Value for Right Aroow key
   const keydownRight = 39;
   if (e.keyCode === keydownLeft || e.keyCode === keydownRight) {
     tabs[tabFocus].setAttribute('tabindex', -1);
@@ -32,13 +34,13 @@ for (let tabindex = 0; tabindex < tabs.length; tabindex++) {
     // Remove active from all the tabs and add it to the current one
     tabs.forEach((tab) => tab.classList.remove('active'));
     tabs[tabindex].classList.add('active');
-
+    // Set aria-selected attritute to false and add it to the current tab
     tabs.forEach((tab) => tab.setAttribute('aria-selected', 'false'));
     tabs[tabindex].setAttribute('aria-selected', 'true');
-
+    // Set d-none property to all pic and add it to the current tab pic
     planetPics.forEach((planetPic) => planetPic.classList.add('d-none'));
     planetPics[tabindex].classList.remove('d-none');
-
+    // Set articles attribte to hidden and remove hidden from current article
     destinationInfos.forEach((destinationInfo) => {
       destinationInfo.setAttribute('hidden', '');
     });
