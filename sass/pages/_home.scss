@@ -22,7 +22,8 @@
   @media (min-width: 48em) {
     margin-top: 0;
     padding-bottom: max(6rem, 20vh);
-    height: clamp(46rem, 90vh, 50rem);
+    height: clamp(40rem, 90vh, 45rem);
+    align-items: end !important;
     --container-column-gap: 0rem;
     --container-row-gap: 0rem;
 
